@@ -1,0 +1,14 @@
+<body>
+  Testing.
+  <script>
+try {
+  Notification.requestPermission().then(function () {});
+  document.body.style.backgroundColor = 'green';
+  document.body.innerHTML = "PASS";
+  } catch (e) {
+  document.body.style.backgroundColor = 'red';
+  document.body.innerHTML = "FAIL: " + e.message;
+    console.log(e);
+}
+</script>
+</body>
